@@ -1,14 +1,112 @@
-html, body {
-  max-height: 100%;
-  max-width: 100%;
+html, body{
+  max-height:100%;
+  max-width:100%;
+  font-size: 15pt;
 }
 
+/* Wrapper */
+
 .wrapper{
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
   overflow:hidden;
+  animation: wrapper 3s forwards;
+}
+
+@keyframes wrapper{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
 }
 
 #bg{
-  background: url("images/rainbow.png") repeat-x;
+  
   height:100%;
-  width:5076px;
+  width:7500px;
+  background:  #000000 url("images/rainbow.jpg") bottom left;
+  background-repeat: repeat-x;
+  background-size: 2500px auto;
+  animation: slide 60s linear infinite;
 }
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0,0,0);
+  }
+  100%{
+    transform: translate3d(-2500px,0,0);
+  }
+}
+
+/* Main */
+
+#main {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;	
+}
+
+  #main:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+
+  }
+
+/* Header */
+
+#header{
+  color:white;
+  display: inline-block;
+  font-family: pulseFont;
+  width: 90%;
+  position: relative;
+  vertical-align: middle;
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+
+  #header h1{
+    font-size: 4.35em;
+    font-weight: 900;
+    letter-spacing: -0.1em;
+    line-height: 1em;
+    margin:0;
+    padding:0;
+  }
+  #header p{
+    margin: 1em 0 0.25em 0;
+    font-size:1.0em;
+    opacity:0.75;
+  }
+  #header nav{
+    margin:1.5em 0 0 0;
+  }
+
+
+
+
+
+/* Fonts*/
+
+@font-face {
+    font-family: pulseFont;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+
+
+
+
