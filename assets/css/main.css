@@ -3,6 +3,27 @@ html, body{
   max-width:100%;
   font-size: 15pt;
 }
+/* Icons */
+.icon{
+  font-family:FontAwesome;
+  border-radius: 100%;
+  border: solid 1px #fff;
+  display: block;
+  font-size: 1.75em;
+  height: 2.5em;
+  line-height: 2.5em;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 2.5em;
+}
+.icon::before {
+  font-family:FontAwesome;
+}
+.fa-envelope-o:before {
+    content: "\f003";
+}
+
 
 /* Wrapper */
 
@@ -15,6 +36,19 @@ html, body{
   width: 100%;
   overflow:hidden;
   animation: wrapper 3s forwards;
+}
+
+#overlay{
+
+  background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+  background-position: top left, center center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:fixed;
 }
 
 @keyframes wrapper{
@@ -100,11 +134,16 @@ html, body{
 
 
 /* Fonts*/
-
+@font-face{
+    font-family: FontAwesome;
+    src: url(../fonts/FontAwesome.otf);
+}
 @font-face {
     font-family: pulseFont;
     src: url(../fonts/Roboto-Medium.ttf);
+
 }
+
 
 
 
