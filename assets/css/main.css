@@ -5,28 +5,75 @@ html, body{
 }
 /* Icons */
 .icon{
-  font-family:symbolFont;
+  transition: all 0.5s ease-in-out;
   border-radius: 100%;
   border: solid 1px #fff;
-  display: block;
+  display: inline-block;
   font-size: 1.75em;
   height: 2.5em;
   line-height: 2.5em;
   position: relative;
   text-align: center;
-  top: 0;
+  text-decoration:none;
+  color:white;
+  animation: icon_ani 0.8s ease-out both;
   width: 2.5em;
+  
 }
-.icon::before {
-  font-family:symbolFont;
+ul{
+  list-style:none;
+  padding:0;
 }
-.fa-envelope-o:before {
-    content: "\f003";
+#header nav li{
+  text-decoration:none;
+  height:5.35em;
+  width:5.35em;
+	line-height: 5.885em;
+  display:inline-block;
+  position:relative;
+  top:0;
+  
 }
 
-.icon > .label {
-  display: none;
+.icon::before{
+  position:relative;
+  top:0em;
+  opacity:0; 
 }
+.icon:hover{
+  font-size:2em;
+  background-color: rgba(255, 255, 255, 0.175);
+}
+
+.icon:active{
+  background-color: rgba(255,255,255,0.35);
+  font-size:1.75em;
+}
+.icon:nth-child(1){
+  animation-delay:1s;
+}
+.icon:nth-child(2){
+  animation-delay:1.2s;
+}
+.icon:nth-child(3){
+  animation-delay:1.4s;
+}
+
+
+
+@keyframes icon_ani{
+  0%{
+    top:1em;
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+    top:0px;
+  }
+}
+
+
+
 
 
 /* Wrapper */
@@ -48,12 +95,23 @@ html, body{
   background-position: top left, center center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
+  animation: overlay 1.5s 1.5s forwards;
   height:100%;
   width:100%;
   top:0;
   left:0;
   position:fixed;
+  opacity:0;
 }
+
+@keyframes overlay{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}	
 
 @keyframes wrapper{
   0%{
@@ -67,10 +125,10 @@ html, body{
 #bg{
   
   height:100%;
-  width:7500px;
+  width:6000px;
   background:  #000000 url("images/rainbow.jpg") bottom left;
   background-repeat: repeat-x;
-  background-size: 2500px auto;
+  background-size: 2000px auto;
   animation: slide 60s linear infinite;
 }
 
@@ -79,7 +137,7 @@ html, body{
     transform: translate3d(0,0,0);
   }
   100%{
-    transform: translate3d(-2500px,0,0);
+    transform: translate3d(-2000px,0,0);
   }
 }
 
@@ -119,9 +177,10 @@ html, body{
   #header h1{
     font-size: 4.35em;
     font-weight: 900;
-    letter-spacing: -0.1em;
+    letter-spacing: 0.1em;
     line-height: 1em;
     margin:0;
+    margin-bottom:0.1em;
     padding:0;
   }
   #header p{
@@ -138,10 +197,7 @@ html, body{
 
 
 /* Fonts*/
-@font-face{
-    font-family: symbolFont;
-    src: url("../fonts/FontAwesome.otf");
-}
+
 @font-face {
     font-family: pulseFont;
     src: url("../fonts/Roboto-Medium.ttf");
