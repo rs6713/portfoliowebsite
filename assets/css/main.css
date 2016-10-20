@@ -27,14 +27,93 @@ section{
   display:block;
 }
 #past_work{
-  height:20em;
   width:100%;
   background-color:blue;
-  display:block;
+  display:flex;
   clear:both;
   position: absolute;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+#past_work article{
+  height:25em;
+  overflow: hidden;
+  position: relative;
+  margin:0;
+  align-items: center;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+#past_work article:nth-child(1){
+  width:60%;
+  background-color:yellow;
+}
+#past_work article .image{
+  background-image: url("images/robot.jpg");
+  height:200px;
+  width:200px;
+  background-size: 100% auto;
+  position:relative;
+  top:0;
+  left:0;
+  opacity:0.5;
+ 
+}
+#past_work .image:hover{
+  opacity:1;
+}
+			#past_work article:hover:after{
+				opacity: 0;
+			}
+
+#past_work article::after{
+				opacity:0.85;
+				-moz-transition: opacity 0.5s ease;
+				-webkit-transition: opacity 0.5s ease;
+				-ms-transition: opacity 0.5s ease;
+				transition: opacity 2s ease;
+				content: '';
+				display: block;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 2;
+}
+
+#past_work article:nth-child(2)::before{
+                                background-image: url("images/robot.jpg");
+                                background-size: auto 100%;
+
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 100%;
+				left: 0;
+				opacity: 1;
+				position: absolute;
+				width: 100%;
+				z-index: 1;
+}
+#past_work article:nth-child(2):after{
+  background-color: #8d82c4;
   
 }
+#past_work article:nth-child(2){
+  width:40%;
+  
+}
+#past_work article:nth-child(3){
+  width:40%;
+  background-color:red;
+}
+#past_work article:nth-child(4){
+  width:60%;
+  background-color:green;
+}
+
 
 #header nav li:nth-child(1){
   animation-delay:3.5s;

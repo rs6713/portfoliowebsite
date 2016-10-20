@@ -2741,7 +2741,7 @@
 				-moz-transition: opacity 0.5s ease;
 				-webkit-transition: opacity 0.5s ease;
 				-ms-transition: opacity 0.5s ease;
-				transition: opacity 0.5s ease;
+				transition: opacity 2s ease;
 				bottom: 0;
 				content: '';
 				display: block;
@@ -2750,11 +2750,11 @@
 				opacity: 0.85;
 				position: absolute;
 				width: 100%;
-				z-index: 2;
+				z-index:2;
 			}
 
 			.tiles article:after {
-				background-color: rgba(36, 41, 67, 0.25);
+				background-color: rgba(36, 41, 67, 0.5);
 				content: '';
 				display: block;
 				height: 100%;
@@ -2766,7 +2766,7 @@
 			}
 
 			.tiles article:hover:before {
-				opacity: 0;
+				opacity:0 ;
 			}
 
 			.tiles article.is-transitioning {
