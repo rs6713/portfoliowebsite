@@ -3,6 +3,8 @@ html, body{
   max-width:100%;
   font-size: 15pt;
 }
+
+
 /* Icons */
 .icon{
   transition: all 0.4s ease-in-out;
@@ -120,7 +122,7 @@ ul{
   background-position: top left, center center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
-  animation: overlay 1.5s 1.5s forwards;
+  animation: overlay 2.5s 1.25s forwards;
   height:100%;
   width:100%;
   top:0;
@@ -166,6 +168,7 @@ ul{
   }
 }
 
+
 /* Main */
 
 #main {
@@ -184,6 +187,7 @@ ul{
     vertical-align: middle;
 
   }
+
 
 /* Header */
 
