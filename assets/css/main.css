@@ -1,5 +1,5 @@
 html, body{
-  max-height:100%;
+  min-height:100vh;
   max-width:100%;
   font-size: 15pt;
 }
@@ -20,6 +20,18 @@ html, body{
 }
 #header nav li{
   animation: icon_ani 0.5s ease-out both;
+}
+section{
+  display:block;
+}
+#past_work{
+  height:20em;
+  width:100%;
+  background-color:blue;
+  display:block;
+  clear:both;
+  position: absolute;
+  
 }
 
 #header nav li:nth-child(1){
@@ -77,20 +89,29 @@ ul{
 }
 
 
-
-
-
-/* Wrapper */
-
-.wrapper{
-  height: 100%;
+.page_wrapper{
   left: 0;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
+  display:block;
+  width: 100%;
+  
+  animation: intro 3s forwards;
+}
+
+
+/* intro */
+
+.intro{
+  height: 100vh;
+  
+  opacity: 1;
+  
+  display:block;
   width: 100%;
   overflow:hidden;
-  animation: wrapper 3s forwards;
+  
 }
 
 #overlay{
@@ -117,7 +138,7 @@ ul{
   }
 }	
 
-@keyframes wrapper{
+@keyframes intro{
   0%{
     opacity:0;
   }
@@ -152,7 +173,7 @@ ul{
   width: 100%;
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   text-align: center;	
 }
 
