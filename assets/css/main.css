@@ -26,6 +26,24 @@ html, body{
 section{
   display:block;
 }
+
+#who_i_am{
+  width:100%;
+  padding: 2em, 0em, 2em, 0em;
+  height:10em;
+  clear:both;
+  position:absolute;
+  text-align:center;
+  background-color:#2e3842;
+  color:white;
+  font-family:pulseFont;
+  display:block;
+}
+#who_i_am #main{
+  width:60%;
+}
+
+
 #past_work{
   width:100%;
   display:flex;
