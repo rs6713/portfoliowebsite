@@ -30,8 +30,8 @@ section{
 #who_i_am{
   width:100%;
   
-  height:10em;
-  
+  height:30em;
+  position:relative;
   padding:2em 0em 2em 0em;
   margin:0;
   text-align:center;
@@ -43,10 +43,77 @@ section{
 }
 #who_i_am #main_hi{
   width:60%;
+  margin-top:10em;
   margin-left:20%;
+  position:absolute;
+}
+
+#who_i_am li{
+  width:4em;
+  height:4em;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  border: solid 2px #fff;
+  /*border-color: rgba(255, 255, 255, 0.25);*/
+  text-align:center;
+  position:absolute;
+  text-align:center;
+  color:white;
+}
+
+#who_i_am i{
+  
+  display: inline-block;
+  font-size: 2em;
+  line-height: 2em;
+  transform: rotate(-45deg);
+}
+
+#who_i_am li:nth-child(1){
+  left:60%;
+  bottom:18%;
+  border-color:#ffae00;
+}
+#who_i_am li:nth-child(2){
+  right:70%;
+  bottom:7%; 
+  border-color:#d00bea;
+}
+#who_i_am li:nth-child(3){
+  right:85%;
+  top:25%;
+  color:white;
+  border-color:red;
+}
+#who_i_am li:nth-child(4){
+  left:85%;
+  top:40%;
+  border-color:#3fea0b;
+}
+#who_i_am li:nth-child(5){
+  left:48%;
+  top:7%;
+  border-color:#36f3f9;
 }
 
 
+#who_i_am #main_hi h2:after{
+    position:relative;
+    top:0.6em;
+    content: '';
+    display: block;
+    height: 2px;
+    width:100%;
+    background-color:black;
+    opacity:0.5;
+}
+
+
+#who_i_am #main_hi p{
+  margin-top:2em;
+  text-align: center;
+  opacity:0.75;
+}
 #past_work{
   width:100%;
   display:flex;
