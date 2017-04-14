@@ -104,6 +104,8 @@ section{
     display: block;
     height: 2px;
     width:100%;
+    /*background-image:url("images/rainbow.png");
+    background-size:cover;*/
     background-color:black;
     opacity:0.5;
 }
