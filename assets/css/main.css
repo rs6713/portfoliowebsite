@@ -251,6 +251,11 @@ section{
   background-color: #e7b788;
 }
 
+#past_work article:nth-child(5){
+  background-image: url("images/display.jpg");
+}
+
+
 
 #header nav li:nth-child(1){
   animation-delay:3.5s;
@@ -371,7 +376,7 @@ ul{
   width:6000px;
   background:  #000000 url("images/rainbow.jpg") bottom left;
   background-repeat: repeat-x;
-  background-size: 2000px auto;
+  background-size: 1500px auto;
   animation: slide 60s linear infinite;
 }
 
